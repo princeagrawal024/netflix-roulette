@@ -1,15 +1,19 @@
 import { useState } from 'react'
 import './App.css'
 import CounterIndex from './components/Counter/CounterIndex'
+import GenreNavBar from './components/GenreSelect/GenreNavBar'
 
 
 function App() {
-  const [count, setCount] = useState(0)
+  let genres = ["ALL", "Crime", "Comedy", "Suspense", "ScienceFiction"];
+  let selectedGenre = genres[1];
+  let onSelectCallBack=(genre) => console.log("Selected genre:", genre)
 
   return (
     <>
       <div>
-        <CounterIndex/>
+        <GenreNavBar genres={genres} selectedGenre={selectedGenre} onSelectCallBack={onSelectCallBack} />
+        <CounterIndex />
       </div>
     </>
   )
