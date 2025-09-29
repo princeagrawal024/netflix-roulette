@@ -1,7 +1,8 @@
 import { createElement, useState } from "react";
 
 function MyCounter(props) {
-  const [value, setValue] = useState(props.initialValue);
+  let initialValue = props.initialValue == null ? 1 : props.initialValue;
+  const [value, setValue] = useState(initialValue);
 
   const increment = () => {
     let incrementedValue = value + 1;
@@ -16,7 +17,7 @@ function MyCounter(props) {
   return createElement(
     "div",
     null,
-    createElement("h2", null, `Value: ${value}`),
+    createElement("h2", null, `${value}`),
     createElement("button", { onClick: decrement }, "-"),
     createElement("button", { onClick: increment }, "+")
   );

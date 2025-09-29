@@ -6,10 +6,10 @@ export default function CounterIndex() {
   return (
     <div>
         {/* Counter using jsx  */}
-        <Counter initialValue={0}/>
+        <Counter />
 
         {/* MyCounter using ECMA */}
-        <MyCounter initialValue={0}/>
+        <MyCounter />
     </div>
   )
 }
