@@ -1,14 +1,23 @@
-.nav-link {
-  color: blue;
-  position: relative;
+/* Only apply black background to Genre NavBar */
+.genre-navbar {
+  background-color: black !important;
 }
 
-.nav-link.active::after {
+/* Genre links */
+.genre-navbar .nav-link {
+  color: white !important; 
+  position: relative;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+/* Active red underline */
+.genre-navbar .nav-link.active::after {
   content: "";
   position: absolute;
   bottom: 0;
   left: 0;
   height: 2px;          
   width: 100%;
-  background-color: red; 
+  background-color: red;
 }
