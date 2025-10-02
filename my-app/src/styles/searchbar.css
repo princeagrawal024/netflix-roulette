@@ -1,27 +1,25 @@
-/* Apply only to this SearchBar */
 .search-navbar {
-  background-color: #000; /* optional: black navbar */
+  background-color: black;  /* same as genre navbar */
+  width: 100%;              /* ✅ full width */
   padding: 12px 20px;
+  display: flex;
+  justify-content: center;
 }
 
-/* Form container: input + button in a single row */
 .search-form {
   display: flex;
   width: 100%;
-  max-width: 800px; /* adjust width of search bar */
-  margin: 0 auto;   /* center in navbar */
+  max-width: 800px;         /* ✅ keep bar centered & responsive */
 }
 
-/* Search input */
 .search-input {
-  flex: 1; /* take remaining space */
+  flex: 1;
   padding: 10px 14px;
   border: 1px solid #ccc;
-  border-radius: 4px 0 0 4px; /* round only left side */
+  border-radius: 4px 0 0 4px;
   font-size: 16px;
 }
 
-/* Search button */
 .search-button {
   padding: 10px 20px;
   border: none;
@@ -29,11 +27,11 @@
   color: white;
   font-size: 16px;
   font-weight: bold;
-  border-radius: 0 4px 4px 0; /* round only right side */
+  border-radius: 0 4px 4px 0;
   cursor: pointer;
   transition: background-color 0.2s ease;
 }
 
 .search-button:hover {
-  background-color: darkred; /* hover effect */
+  background-color: darkred;
 }

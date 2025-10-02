@@ -9,7 +9,7 @@ export default function GenreNavBar(props) {
     
     return (
         <div>
-            <nav className="navbar navbar-expand-lg genre-navbar">
+            <nav className="navbar navbar-expand-lg genre-navbar ">
                 <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div className="navbar-nav">
                         {

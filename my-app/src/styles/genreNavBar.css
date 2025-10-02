@@ -1,9 +1,12 @@
-/* Only apply black background to Genre NavBar */
 .genre-navbar {
   background-color: black !important;
+  width: 100%;              /* ✅ full width */
+  display: flex;
+  justify-content: center;
+  padding: 12px 0;          /* optional padding */
 }
 
-/* Genre links */
+/* Links */
 .genre-navbar .nav-link {
   color: white !important; 
   position: relative;
@@ -11,7 +14,7 @@
   text-decoration: none;
 }
 
-/* Active red underline */
+/* Active underline */
 .genre-navbar .nav-link.active::after {
   content: "";
   position: absolute;
