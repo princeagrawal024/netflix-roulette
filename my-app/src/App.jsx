@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import './App.css'
-import CounterIndex from 'components/Counter/CounterIndex'
 import GenreNavBar from 'components/GenreSelect/GenreNavBar'
 import SearchBar from 'components/SearchForm/SearchBar';
+import Counter from './components/Counter/JSXCounter';
 
 
 function App() {
@@ -30,7 +30,7 @@ function App() {
         <GenreNavBar genres={genres} selectedGenre={selectedGenre} onSelectCallBack={onSelectCallBack} />
       </div>
       <div className='Counter'>
-        <CounterIndex />
+        <Counter  initialValue={100}/>
       </div>
     </>
   )
