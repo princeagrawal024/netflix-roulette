@@ -1,25 +1,24 @@
-/* Root container */
 #root {
   width: 100%;
   margin: 0;
   padding: 0;
-  background-color: #653b3b53;   /* full black background */
-  color: #fff;              /* default text white */
+  background-color: #653b3b53; 
+  color: #fff;              
   font-family: 'Arial', sans-serif;
   min-height: 100vh;
   text-align: center;
 }
 
-/* General layout */
+
 body {
   margin: 0;
-  background-color: #000;   /* keep body black too */
+  background-color: #000;
   color: #fff;
 }
 
-/* Cards or content blocks */
+
 .card {
-  background-color: #111;   /* slightly lighter than black */
+  background-color: #111;  
   border: 1px solid #222;
   border-radius: 8px;
   padding: 2em;
@@ -34,12 +33,11 @@ body {
   box-shadow: 0 4px 20px rgba(255, 0, 0, 0.3);
 }
 
-/* Counter section */
+
 .Counter {
   margin-top: 20px;
 }
 
-/* Logo adjustments if you still use it */
 .logo {
   height: 6em;
   padding: 1.5em;
@@ -49,9 +47,9 @@ body {
   filter: drop-shadow(0 0 2em red);
 }
 
-/* Links */
+
 a {
-  color: #ff3333;           /* Netflix red links */
+  color: #ff3333;           
   text-decoration: none;
 }
 a:hover {
@@ -59,7 +57,7 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Utility text */
+
 .read-the-docs {
   color: #888;
 }

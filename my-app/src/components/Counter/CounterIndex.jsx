@@ -1,15 +1,10 @@
-import React from 'react'
-import Counter from './JSXCounter'
-import MyCounter from './ECMACounter'
+import Counter from 'components/Counter/JSXCounter'
+
 
 export default function CounterIndex() {
   return (
     <div>
-        {/* Counter using jsx  */}
         <Counter />
-
-        {/* MyCounter using ECMA */}
-        <MyCounter />
     </div>
   )
 }

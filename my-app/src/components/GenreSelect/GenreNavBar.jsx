@@ -1,5 +1,4 @@
-import React from 'react'
-import '../../styles/genreNavBar.css';
+import 'styles/genreNavBar.css';
 
 export default function GenreNavBar(props) {
     let genres = props.genres;

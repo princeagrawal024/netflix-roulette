@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import './App.css'
-import CounterIndex from './components/Counter/CounterIndex'
-import GenreNavBar from './components/GenreSelect/GenreNavBar'
-import SearchBar from './components/SearchForm/SearchBar';
+import CounterIndex from 'components/Counter/CounterIndex'
+import GenreNavBar from 'components/GenreSelect/GenreNavBar'
+import SearchBar from 'components/SearchForm/SearchBar';
 
 
 function App() {
