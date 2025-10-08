@@ -6,13 +6,11 @@ export default function Counter(props) {
 
   const increment = () => {
     let incrementedValue = currentValue + 1;
-    //console.log("increment value called", incrementedValue);
     setValue(incrementedValue);
   };
 
   const decrement = () => {
     let decreamentedValue = currentValue - 1;
-    //console.log("decrement value called", decreamentedValue);
     setValue(decreamentedValue);
   };
 
