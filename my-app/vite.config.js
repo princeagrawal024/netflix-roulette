@@ -1,15 +1,18 @@
-// vite.config.js
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-import { fileURLToPath, URL } from 'node:url'
+import path from 'path'
 
 export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
-      '@': fileURLToPath(new URL('./src', import.meta.url)),
-      'components': fileURLToPath(new URL('./src/components', import.meta.url)),
-      'styles': fileURLToPath(new URL('./src/styles', import.meta.url)),
+      components: path.resolve(__dirname, './src/components'),
+      styles: path.resolve(__dirname, './src/styles')
     }
+  },
+  test: {
+    globals: true,
+    environment: 'jsdom',
+    setupFiles: './test/setupTests.js'
   }
 })
