@@ -2,7 +2,7 @@ import { useState } from 'react'
 import './App.css'
 import GenreNavBar from 'components/GenreSelect/GenreNavBar'
 import SearchBar from 'components/SearchForm/SearchBar';
-import Counter from './components/Counter/JSXCounter';
+import Counter from './components/Counter/Counter';
 
 
 function App() {
@@ -20,8 +20,7 @@ function App() {
   let searchQuery = "suspense thriller";
   let onSearchCallback = (query)=>{console.log("search movie button clicked:", query)};
 
-
-  return (
+return (
     <>
       <div className='MoviesSearchBar'>
         <SearchBar searchQuery={searchQuery} onSearchCallback={onSearchCallback}/>
@@ -35,5 +34,4 @@ function App() {
     </>
   )
 }
-
 export default App

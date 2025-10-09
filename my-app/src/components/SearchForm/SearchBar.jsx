@@ -16,7 +16,7 @@ export default function SearchBar(props) {
                         type="search"
                         placeholder="What do you want to watch?"
                         value={searchQuery}
-                        onChange={(e) => setSearchQuery(e.target.value)}
+                        onChange={(query) => setSearchQuery(query.target.value)}
                         >
                     </input>
 
