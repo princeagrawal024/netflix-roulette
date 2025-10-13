@@ -2,28 +2,29 @@ import { useState } from 'react'
 import './App.css'
 import GenreNavBar from 'components/GenreSelect/GenreNavBar'
 import SearchBar from 'components/SearchForm/SearchBar';
-import Counter from './components/Counter/Counter';
+import Counter from 'components/Counter/Counter';
 
 
 function App() {
 
   //NavBar
   let genres = ["ALL", "DOCUMENTARY", "COMEDY", "HORROR", "CRIME"];
-  const [selectedGenre, setSelectedGenre] = useState(genres[0]);
+  const [selectedGenre, setSelectedGenre] = useState<string>(genres[0]);
 
-  let onSelectCallBack = (genre) => {
+  let onSelectCallBack = (genre:string) => {
     console.log("Selected genre:", genre);
     setSelectedGenre(genre);
   }
 
   //SearchBar
-  let searchQuery = "suspense thriller";
-  let onSearchCallback = (query)=>{console.log("search movie button clicked:", query)};
+  let searchQuery:string = "suspense thriller";
+  let onSearchCallback = (query:string)=>{console.log("search movie button clicked:", query)};
 
-return (
+
+  return (
     <>
       <div className='MoviesSearchBar'>
-        <SearchBar searchQuery={searchQuery} onSearchCallback={onSearchCallback}/>
+        <SearchBar inputSearchQuery={searchQuery} onSearchCallback={onSearchCallback}/>
       </div>
       <div className='NaveBar'>
         <GenreNavBar genres={genres} selectedGenre={selectedGenre} onSelectCallBack={onSelectCallBack} />
@@ -34,4 +35,5 @@ return (
     </>
   )
 }
+
 export default App
