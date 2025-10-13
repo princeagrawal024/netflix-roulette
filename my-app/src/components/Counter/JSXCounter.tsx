@@ -1,17 +1,14 @@
 import React, { useState } from 'react'
 
-export default function Counter(props) {
-  let initialValue = props.initialValue == null ? 1 : props.initialValue;
+export default function Counter({ initialValue = 1 }) {
   const [currentValue, setValue] = useState(initialValue);
 
   const increment = () => {
-    let incrementedValue = currentValue + 1;
-    setValue(incrementedValue);
+    setValue(currentValue+1);
   };
 
   const decrement = () => {
-    let decreamentedValue = currentValue - 1;
-    setValue(decreamentedValue);
+    setValue(currentValue-1);
   };
 
   return (

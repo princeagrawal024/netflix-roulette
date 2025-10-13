@@ -1,11 +1,13 @@
 import 'styles/genreNavBar.css';
 
-export default function GenreNavBar(props) {
-    let genres = props.genres;
-    let selectedGenre = props.selectedGenre;
-    let onSelectCallBack = props.onSelectCallBack;
-    
-    
+type GenreNavBarProps = {
+  genres: string[];
+  selectedGenre: string;
+  onSelectCallBack: (genre: string) => void;
+};
+
+export default function GenreNavBar({ genres, selectedGenre, onSelectCallBack }: GenreNavBarProps) {
+
     return (
         <div>
             <nav className="navbar navbar-expand-lg genre-navbar ">
