@@ -9,7 +9,7 @@ function App() {
 
   //NavBar
   let genres = ["ALL", "DOCUMENTARY", "COMEDY", "HORROR", "CRIME"];
-  const [selectedGenre, setSelectedGenre] = useState(genres[0]);
+  const [selectedGenre, setSelectedGenre] = useState<string>(genres[0]);
 
   let onSelectCallBack = (genre:string) => {
     console.log("Selected genre:", genre);

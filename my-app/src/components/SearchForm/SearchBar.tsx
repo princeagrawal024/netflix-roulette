@@ -8,7 +8,7 @@ type SearchBarProps = {
 
 export default function SearchBar({inputSearchQuery, onSearchCallback}: SearchBarProps) {
 
-    const [searchQuery, setSearchQuery] = useState(inputSearchQuery);
+    const [searchQuery, setSearchQuery] = useState<string>(inputSearchQuery);
 
   return (
     <div>
