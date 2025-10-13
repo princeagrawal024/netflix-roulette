@@ -1,4 +1,3 @@
-import React from 'react'
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import Counter from "components/Counter/Counter";
@@ -16,11 +15,14 @@ describe("Counter", () => {
 
     test("Counter: Test that a click event on decrement button decrements the displayed value", async () => {
         render(<Counter initialValue={initialValue} />);
-        let decrementBtn = screen.getByRole("button", { name: "-" });
-        await userEvent.click(decrementBtn);
-        await userEvent.click(decrementBtn);
-
+        const decrementBtn = screen.getByRole("button", { name: "-" });
+        const incrementBtn = screen.getByRole("button", { name: "+" });
+        await userEvent.click(decrementBtn); //9
+        await userEvent.click(decrementBtn); //8
         expect(screen.getByText(8)).toBeInTheDocument()
+
+        await userEvent.click(incrementBtn); //9
+        expect(screen.getByText(9)).toBeInTheDocument()
     })
 
     test("Counter: Test that a click event on increment button increments the displayed value", async () => {

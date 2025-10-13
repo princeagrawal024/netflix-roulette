@@ -1,4 +1,3 @@
-import React from 'react'
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import SearchBar from "components/SearchForm/SearchBar";
@@ -12,7 +11,7 @@ describe("SearchBar", () => {
 
     test(
         "Test component renders an input with the value equal value passed in props", () => {
-            render(<SearchBar searchQuery={searchQuery} onSearchCallback={onSearchCallback} />);
+            render(<SearchBar inputSearchQuery={searchQuery} onSearchCallback={onSearchCallback} />);
             expect(screen.getByPlaceholderText(placeHolder)).toBeInTheDocument();
             expect(screen.getByDisplayValue(searchQuery)).toBeInTheDocument();
         })

@@ -18,7 +18,7 @@ export default function SearchBar({inputSearchQuery, onSearchCallback}: SearchBa
             className="search-input"
             type="search"
             placeholder="What do you want to watch?"
-            value={searchQuery}
+            value={searchQuery || ""}
             onChange={(e) => setSearchQuery(e.target.value)}
           ></input>
 
