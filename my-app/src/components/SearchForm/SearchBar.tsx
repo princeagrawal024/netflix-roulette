@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import "styles/searchBar.css";
+import { useState } from "react";
+import "@/styles/searchBar.css";
 
 type SearchBarProps = {
   inputSearchQuery: string;

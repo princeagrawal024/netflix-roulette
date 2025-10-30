@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import SearchBar from "components/SearchForm/SearchBar";
+import { SearchBar } from '@/components'
 import { expect } from "vitest";
 
 

@@ -1,9 +1,6 @@
 import { useState } from 'react'
 import './App.css'
-import GenreNavBar from 'components/GenreSelect/GenreNavBar'
-import SearchBar from 'components/SearchForm/SearchBar';
-import Counter from './components/Counter/JSXCounter';
-
+import { GenreNavBar, SearchBar, Counter } from '@/components'
 
 function App() {
 

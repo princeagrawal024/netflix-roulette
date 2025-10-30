@@ -1,4 +1,4 @@
-import 'styles/genreNavBar.css';
+import "@/styles/genreNavBar.css";
 
 type GenreNavBarProps = {
   genres: string[];
