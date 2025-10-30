@@ -1,6 +1,10 @@
 import React, { useState } from 'react'
 
-export default function Counter({ initialValue = 1 }) {
+type CounterProps = {
+  initialValue : number
+}
+
+export default function Counter({ initialValue }: CounterProps) {
   const [currentValue, setValue] = useState<number>(initialValue);
 
   const increment = () => {

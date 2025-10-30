@@ -17,7 +17,7 @@ function App() {
   }
 
   //SearchBar
-  let searchQuery:string = "suspense thriller";
+  let searchQuery:string = "";
   let onSearchCallback = (query:string)=>{console.log("search movie button clicked:", query)};
 
 
