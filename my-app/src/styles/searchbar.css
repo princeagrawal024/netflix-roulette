@@ -1,0 +1,37 @@
+.search-navbar {
+  background-color: black;  /* same as genre navbar */
+  width: 100%;              /* ✅ full width */
+  padding: 12px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.search-form {
+  display: flex;
+  width: 100%;
+  max-width: 800px;         /* ✅ keep bar centered & responsive */
+}
+
+.search-input {
+  flex: 1;
+  padding: 10px 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px 0 0 4px;
+  font-size: 16px;
+}
+
+.search-button {
+  padding: 10px 20px;
+  border: none;
+  background-color: red;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.search-button:hover {
+  background-color: darkred;
+}
