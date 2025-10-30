@@ -2,7 +2,7 @@ import { useState } from 'react'
 import './App.css'
 import GenreNavBar from 'components/GenreSelect/GenreNavBar'
 import SearchBar from 'components/SearchForm/SearchBar';
-import Counter from 'components/Counter/Counter';
+import Counter from './components/Counter/JSXCounter';
 
 
 function App() {
