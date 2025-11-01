@@ -1,3 +1,4 @@
+///<reference types="cypress"/>
 describe('Counter Component', () => {
   it('should increment and decrement', () => {
     cy.visit('http://localhost:5173');
