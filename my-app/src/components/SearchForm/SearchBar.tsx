@@ -1,14 +1,17 @@
 import { useState } from "react";
 import "@/styles/searchBar.css";
+import { SEARCHBAR_PLACEHOLDER, SEARCH_BTN_TEXT } from '@/data/app-data';
 
 type SearchBarProps = {
   inputSearchQuery: string;
   onSearchCallback: (query: string) => void;
 };
 
-export default function SearchBar({inputSearchQuery, onSearchCallback}: SearchBarProps) {
-
-    const [searchQuery, setSearchQuery] = useState<string>(inputSearchQuery);
+export default function SearchBar({
+  inputSearchQuery,
+  onSearchCallback,
+}: SearchBarProps) {
+  const [searchQuery, setSearchQuery] = useState<string>(inputSearchQuery);
 
   return (
     <div>
@@ -17,7 +20,7 @@ export default function SearchBar({inputSearchQuery, onSearchCallback}: SearchBa
           <input
             className="search-input"
             type="search"
-            placeholder="What do you want to watch?"
+            placeholder={SEARCHBAR_PLACEHOLDER}
             value={searchQuery || ""}
             onChange={(e) => setSearchQuery(e.target.value)}
           ></input>
@@ -27,7 +30,7 @@ export default function SearchBar({inputSearchQuery, onSearchCallback}: SearchBa
             type="submit"
             onClick={() => onSearchCallback(searchQuery)}
           >
-            SEARCH
+            {SEARCH_BTN_TEXT}
           </button>
         </form>
       </nav>
