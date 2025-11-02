@@ -23,12 +23,14 @@ export default function SearchBar({
             placeholder={SEARCHBAR_PLACEHOLDER}
             value={searchQuery || ""}
             onChange={(e) => setSearchQuery(e.target.value)}
+            data-testid="movie-search-box"
           ></input>
 
           <button
             className="search-button"
             type="submit"
             onClick={() => onSearchCallback(searchQuery)}
+            data-testid="movie-search-btn"
           >
             {SEARCH_BTN_TEXT}
           </button>

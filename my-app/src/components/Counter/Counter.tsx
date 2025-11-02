@@ -20,10 +20,10 @@ export default function Counter({ initialValue }: CounterProps) {
         <h2>{currentValue}</h2>
       </div>
       <div className="btn-group" role="group" aria-label="Basic example">
-        <button type="button" onClick={decrement} className="btn btn-primary">
+        <button type="button" onClick={decrement} className="btn btn-primary"  data-testid="decrement-btn">
           -
         </button>
-        <button type="button" onClick={increment} className="btn btn-primary">
+        <button type="button" onClick={increment} className="btn btn-primary"  data-testid="increment-btn">
           +
         </button>
       </div>

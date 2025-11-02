@@ -22,8 +22,8 @@ describe("SearchBar", () => {
             onSearchCallback = vi.fn();
             render(<SearchBar searchQuery={null} onSearchCallback={onSearchCallback} />);
 
-            let input = screen.getByRole("searchbox");
-            let button = screen.getByRole("button", { name: "SEARCH" });
+            let input = screen.getByTestId("movie-search-box");
+            let button = screen.getByTestId("movie-search-btn");
 
             await userEvent.type(input, "Comedy");
             await userEvent.click(button)
@@ -37,7 +37,7 @@ describe("SearchBar", () => {
             onSearchCallback = vi.fn();
             render(<SearchBar searchQuery={null} onSearchCallback={onSearchCallback} />);
 
-            let input = screen.getByRole("searchbox");
+             let input = screen.getByTestId("movie-search-box");
             await userEvent.type(input, "Comedy{enter}");
 
             expect(onSearchCallback).toHaveBeenCalledTimes(1)
