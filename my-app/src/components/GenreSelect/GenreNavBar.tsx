@@ -1,4 +1,4 @@
-import 'styles/genreNavBar.css';
+import "@/styles/genreNavBar.css";
 
 type GenreNavBarProps = {
   genres: string[];
@@ -15,7 +15,7 @@ export default function GenreNavBar({ genres, selectedGenre, onSelectCallBack }:
                     <div className="navbar-nav">
                         {
                         genres.map((genre, index) => (
-                            <a 
+                            <a
                                 key={index}
                                 className={`nav-item nav-link ${genre === selectedGenre ? 'active' : ''}`}
                                 href="#"

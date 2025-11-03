@@ -16,13 +16,11 @@
     "noEmit": true,
     "jsx": "react-jsx",
 
-    // 👇 Added for absolute imports
     "baseUrl": "src",
     "paths": {
-      "components/*": ["components/*"],
-      "styles/*": ["styles/*"]
+       "@/*": ["*"]
     }
   },
-  "include": ["src"],
+  "include": ["src", "test"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

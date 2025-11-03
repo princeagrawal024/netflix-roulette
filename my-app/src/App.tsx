@@ -1,15 +1,12 @@
 import { useState } from 'react'
 import './App.css'
-import GenreNavBar from 'components/GenreSelect/GenreNavBar'
-import SearchBar from 'components/SearchForm/SearchBar';
-import Counter from 'components/Counter/JSXCounter';
-
+import { GenreNavBar, SearchBar, Counter } from '@/components'
+import { GENRES, COUNTER_INITIAL_VALUE } from '@/data/app-data';
 
 function App() {
 
   //NavBar
-  let genres = ["ALL", "DOCUMENTARY", "COMEDY", "HORROR", "CRIME"];
-  const [selectedGenre, setSelectedGenre] = useState<string>(genres[0]);
+  const [selectedGenre, setSelectedGenre] = useState<string>(GENRES[0]);
 
   let onSelectCallBack = (genre:string) => {
     console.log("Selected genre:", genre);
@@ -17,7 +14,7 @@ function App() {
   }
 
   //SearchBar
-  let searchQuery:string = "suspense thriller";
+  let searchQuery:string = "";
   let onSearchCallback = (query:string)=>{console.log("search movie button clicked:", query)};
 
 
@@ -27,10 +24,10 @@ function App() {
         <SearchBar inputSearchQuery={searchQuery} onSearchCallback={onSearchCallback}/>
       </div>
       <div className='NaveBar'>
-        <GenreNavBar genres={genres} selectedGenre={selectedGenre} onSelectCallBack={onSelectCallBack} />
+        <GenreNavBar genres={GENRES} selectedGenre={selectedGenre} onSelectCallBack={onSelectCallBack} />
       </div>
       <div className='Counter'>
-        <Counter  initialValue={100}/>
+        <Counter  initialValue={COUNTER_INITIAL_VALUE}/>
       </div>
     </>
   )

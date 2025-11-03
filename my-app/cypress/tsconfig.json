@@ -1,0 +1,18 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "types": ["cypress"],
+    "isolatedModules": false,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["../src/*"],
+      "@testData/*": ["testData/*"]
+    }
+  },
+  "include": [
+    "../src",
+    "./testData/**/*",
+    "./**/*.ts",
+    "./**/*.tsx"
+  ]
+}
