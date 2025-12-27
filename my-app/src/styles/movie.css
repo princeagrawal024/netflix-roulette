@@ -1,0 +1,71 @@
+/* Movie.css */
+
+/* Container for all movies */
+.movieContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 movies per row */
+  gap: 20px; /* space between movies */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Individual movie element */
+.movieElement {
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+  overflow: hidden;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+/* Hover effect */
+.movieElement:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.18);
+}
+
+/* Poster image inside MovieItem */
+.movieElement img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Movie details (adjust inside MovieItem) */
+.movieElement .details {
+  padding: 12px 15px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.movieElement .details h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 5px 0;
+}
+
+.movieElement .details p {
+  font-size: 14px;
+  color: transparent;
+  margin: 2px 0;
+}
+
+/* Responsive (for smaller screens) */
+@media (max-width: 1024px) {
+  .movieContainer {
+    grid-template-columns: repeat(2, 1fr); /* 2 per row */
+  }
+}
+
+@media (max-width: 600px) {
+  .movieContainer {
+    grid-template-columns: 1fr; /* 1 per row */
+  }
+}
+
+.movieGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}

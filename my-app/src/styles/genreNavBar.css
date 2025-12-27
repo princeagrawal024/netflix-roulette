@@ -1,26 +1,66 @@
 .genre-navbar {
   background-color: black !important;
-  width: 100%;              /* ✅ full width */
+  width: 100%;
   display: flex;
   justify-content: center;
-  padding: 12px 0;          /* optional padding */
+  padding: 12px 0;
 }
 
 /* Links */
 .genre-navbar .nav-link {
-  color: white !important; 
-  position: relative;
+  color: white !important;
   padding: 8px 16px;
   text-decoration: none;
+  border-bottom: 2px solid transparent;  /* keeps alignment with grey line */
+  transition: border-color 0.3s ease;    /* smooth effect */
+  border-bottom: 2px solid #888;
 }
 
-/* Active underline */
-.genre-navbar .nav-link.active::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  height: 2px;          
+/* Active link turns red */
+.genre-navbar .nav-link.active {
+  border-bottom: 2px solid red;          /* replaces grey section with red */
+}
+
+
+
+/* Sort functionality */
+.sort-functionality {
   width: 100%;
-  background-color: red;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 12px 0;
+  gap: 8px;
+  border-bottom: 2px solid #888;
+  
+}
+
+.sort-functionality label {
+  font-size: 14px;
+  color: #FFFFFF;
+  letter-spacing: 1px;
+}
+
+.sort-functionality select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  background: black;
+  border: none;
+  font-size: 14px;
+  text-transform: uppercase;
+  cursor: pointer;
+  padding-right: 34px;
+  position: relative;
+
+  background-image: url("data:image/svg+xml;utf8,<svg fill='red' height='18' viewBox='0 0 24 24' width='18' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: 30px;
+}
+
+.sort-functionality select:focus {
+  outline: none;
+  box-shadow: none;
 }

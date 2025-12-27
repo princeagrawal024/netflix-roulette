@@ -1,0 +1,100 @@
+.md-div {
+  display: flex;
+  gap: 30px;
+  background-color: #232323;
+  padding: 20px 40px;
+  color: #FFFFFF;
+  min-height: 400px;
+  position: relative;
+}
+
+/* Poster */
+.md-poster {
+  flex-shrink: 0;
+}
+
+.md-image {
+  width: 250px;
+  height: 370px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+/* Right details */
+.md-data {
+  display: flex;
+  flex-direction: column;
+  max-width: 800px;
+}
+
+/* Title + rating inline */
+.md-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.md-title {
+  font-size: 36px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  margin: 0;
+}
+
+.md-rating {
+  border: 2px solid #FFFFFF;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #FFFFFF;
+  text-align: center;
+  line-height: 46px; /* vertically center number */
+}
+
+
+/* Genres below title */
+.md-genres {
+  margin-top: 8px;
+  font-size: 16px;
+  font-weight: 300;
+  text-align: left;
+  color: #AAAAAA; /* lighter gray */
+}
+
+/* Year + runtime side by side in red */
+.md-meta {
+  margin-top: 12px;
+  display: flex;
+  gap: 20px;
+}
+
+.md-release-year,
+.md-runtime {
+  font-size: 20px;
+  font-weight: bold;
+  color: #F65261;
+}
+
+/* Overview text */
+.md-overview {
+  margin-top: 20px;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #FFFFFF;
+  max-width: 700px;
+}
+
+/* 🔍 back button */
+.md-div button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: transparent;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+  color: #F65261;
+}

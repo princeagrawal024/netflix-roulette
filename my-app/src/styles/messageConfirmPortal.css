@@ -1,0 +1,121 @@
+.warning-portal-title {
+  position: relative;
+  background-color: #232323;
+  color: #ffffff;
+  text-align: center;
+  padding: 40px 25px 35px; /* Reduced top padding */
+  border-radius: 8px;
+  width: 380px;
+  margin: 60px auto; /* Increased top margin to accommodate the logo */
+  box-shadow: 0 0 20px rgba(66, 66, 66, 0.4);
+  font-family: Arial, Helvetica, sans-serif;
+  animation: fadeIn 0.25s ease-in-out;
+  z-index: 1; /* Changed from 0 to 1 */
+}
+
+.warning-logo {
+  background-color: #f65261;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 42px;
+  position: absolute;
+  top: -40px; /* Changed from 0 to -40px */
+  left: 50%;
+  transform: translate(-50%, 0); /* Removed Y translation */
+  box-shadow: 0 0 10px rgba(66, 66, 66, 0.5);
+  z-index: 2; /* Changed from 1 to 2 */
+}
+
+.warning-logo svg {
+  width: 42px;
+  height: 42px;
+}
+
+.warning-portal-close-button {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: transparent;
+  border: none;
+  color: #555555;
+  font-size: 18px;
+  cursor: pointer;
+  transition: color 0.2s ease-in;
+}
+
+.warning-portal-close-button:hover {
+  color: #ffffff;
+}
+
+.warning-portal-heading {
+  font-size: 22px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-top: 35px;
+  margin-bottom: 10px;
+  color: #ffffff;
+  letter-spacing: 0.6px;
+}
+
+.warning-portal-title p {
+  font-size: 15px;
+  color: #555555;
+  margin-top: 5px;
+  line-height: 1.5;
+  max-width: 340px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.warning-confirmation-btn {
+  margin-top: 25px;
+  background-color: #f65261;
+  color: #ffffff;
+  font-weight: 600;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 22px;
+  font-size: 15px;
+  cursor: pointer;
+  transition:
+    background-color 0.25s ease,
+    transform 0.1s ease-in-out;
+}
+
+.warning-confirmation-btn:hover {
+  background-color: #424242;
+  transform: translateY(-2px);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 420px) {
+  .warning-portal-title {
+    width: 90%;
+    padding: 45px 20px 30px;
+    margin: 50px auto; /* Added margin for mobile */
+  }
+  .warning-logo {
+    width: 70px;
+    height: 70px;
+    font-size: 36px;
+    top: -35px;
+  }
+  .warning-portal-heading {
+    font-size: 20px;
+  }
+}

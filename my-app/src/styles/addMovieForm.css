@@ -1,0 +1,211 @@
+/* Overlay background */
+.am-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(12, 12, 12, 0.8);
+  backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9998;
+}
+
+/* Modal container */
+.am-modal {
+  background: #232323;
+  border-radius: 6px;
+  padding: 30px 40px;
+  width: 600px;
+  max-width: 90%;
+  color: #fff;
+  position: relative;
+  z-index: 9999;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.6);
+}
+
+/* Title */
+.am-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.am-heading {
+  font-size: 22px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Close button */
+.am-close-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  color: #aaa;
+  cursor: pointer;
+}
+
+.am-close-btn:hover {
+  color: #fff;
+}
+
+/* Form body */
+.am-form-body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px 30px;
+}
+
+/* Full width for large fields */
+.am-field-full {
+  grid-column: span 2;
+}
+
+/* Labels */
+.am-label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #ff4c65; /* red accent */
+  text-transform: uppercase;
+}
+
+/* Inputs, Select, Textarea */
+.am-input,
+.am-select,
+.am-textarea {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  background: #2b2b2b;
+  color: #fff;
+  font-size: 14px;
+  outline: none;
+}
+
+.am-input:focus,
+.am-select:focus,
+.am-textarea:focus {
+  border: 1px solid #ff4c65;
+}
+
+/* Textarea spans full row */
+.am-textarea {
+  resize: none;
+  min-height: 100px;
+}
+
+/* Actions (buttons) */
+.am-actions {
+  grid-column: span 2;
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.am-btn {
+  padding: 10px 30px;
+  border-radius: 3px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 14px;
+  border: 1px solid transparent;
+  transition: 0.3s;
+}
+
+.am-reset-btn {
+  background: transparent;
+  border: 1px solid #ff4c65;
+  color: #ff4c65;
+}
+
+.am-reset-btn:hover {
+  background: #ff4c65;
+  color: #fff;
+}
+
+.am-submit-btn {
+  background: #ff4c65;
+  color: #fff;
+  border: 1px solid #ff4c65;
+}
+
+.am-submit-btn:hover {
+  background: #ff304c;
+}
+
+.genre-dropdown {
+  position: relative;
+  width: 100%;
+}
+
+.genre-dropdown-header {
+  background-color: #1e1e1e;
+  border: 1px solid #444;
+  border-radius: 4px;
+  padding: 10px 12px;
+  color: white;
+  cursor: pointer;
+  user-select: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.genre-dropdown-header .arrow {
+  font-size: 20px;
+  color: red;
+}
+
+.genre-dropdown-list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: #1e1e1e;
+  border: 1px solid #444;
+  border-radius: 4px;
+  margin-top: 5px;
+  z-index: 10;
+  max-height: 160px;
+  overflow-y: auto;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.genre-option {
+  display: flex;
+  align-items: center;
+  padding: 8px 12px;
+  color: #ddd;
+  cursor: pointer;
+}
+
+.genre-option:hover {
+  background-color: #2b2b2b;
+}
+
+.genre-option input {
+  margin-right: 8px;
+  cursor: pointer;
+}
+
+/* Scrollbar aesthetic */
+.genre-dropdown-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.genre-dropdown-list::-webkit-scrollbar-thumb {
+  background-color: #555;
+  border-radius: 3px;
+}

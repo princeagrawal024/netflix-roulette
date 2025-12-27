@@ -1,47 +1,69 @@
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import { SearchBar } from '@/components'
-import { expect } from "vitest";
-
+import { MemoryRouter } from "react-router-dom";
+import { SearchBar } from "@/components";
+import { expect, vi } from "vitest";
 
 describe("SearchBar", () => {
-    const placeHolder = "What do you want to watch?";
-    const searchQuery = "Pursuit of happyness";
-    let onSearchCallback = () => { }
+  const placeHolder = "What do you want to watch?";
+  const searchQuery = "Pursuit of happyness";
+  let onSearchCallback = () => {};
 
-    test(
-        "Test component renders an input with the value equal value passed in props", () => {
-            render(<SearchBar inputSearchQuery={searchQuery} onSearchCallback={onSearchCallback} />);
-            expect(screen.getByPlaceholderText(placeHolder)).toBeInTheDocument();
-            expect(screen.getByDisplayValue(searchQuery)).toBeInTheDocument();
-        })
+  test("Test component renders an input with correct value", () => {
+    render(
+      <MemoryRouter>
+        <SearchBar
+          inputSearchQuery={searchQuery}
+          onSearchCallback={onSearchCallback}
+          setDisplayAddMovieFormCallBack={() => {}}
+        />
+      </MemoryRouter>
+    );
+    expect(screen.getByPlaceholderText(placeHolder)).toBeInTheDocument();
+    expect(screen.getByDisplayValue(searchQuery)).toBeInTheDocument();
+  });
 
+  test("Test clicking submit calls onSearchCallback", async () => {
+    onSearchCallback = vi.fn();
 
-    test(
-        "Test after typing a click event on the Submit button, the onChange prop is called", async () => {
-            onSearchCallback = vi.fn();
-            render(<SearchBar searchQuery={null} onSearchCallback={onSearchCallback} />);
+    render(
+      <MemoryRouter>
+        <SearchBar
+          inputSearchQuery=""
+          onSearchCallback={onSearchCallback}
+          setDisplayAddMovieFormCallBack={() => {}}
+        />
+      </MemoryRouter>
+    );
 
-            let input = screen.getByTestId("movie-search-box");
-            let button = screen.getByTestId("movie-search-btn");
+    const input = screen.getByTestId("movie-search-box");
+    const button = screen.getByTestId("movie-search-btn");
 
-            await userEvent.type(input, "Comedy");
-            await userEvent.click(button)
+    await userEvent.type(input, "Comedy");
+    await userEvent.click(button);
 
-            expect(onSearchCallback).toHaveBeenCalledTimes(1)
-            expect(onSearchCallback).toHaveBeenCalledWith("Comedy")
-        })
+    expect(onSearchCallback).toHaveBeenCalledTimes(1);
+    expect(onSearchCallback).toHaveBeenCalledWith("Comedy");
+  });
 
-    test(
-        "Test after typing to input and pressing Enter, the onChange prop called with proper value", async () => {
-            onSearchCallback = vi.fn();
-            render(<SearchBar searchQuery={null} onSearchCallback={onSearchCallback} />);
+  test("Test pressing Enter triggers onSearchCallback", async () => {
+    onSearchCallback = vi.fn();
 
-             let input = screen.getByTestId("movie-search-box");
-            await userEvent.type(input, "Comedy{enter}");
+    render(
+      <MemoryRouter>
+        <SearchBar
+          inputSearchQuery=""
+          onSearchCallback={onSearchCallback}
+          setDisplayAddMovieFormCallBack={() => {}}
+        />
+      </MemoryRouter>
+    );
 
-            expect(onSearchCallback).toHaveBeenCalledTimes(1)
-            expect(onSearchCallback).toHaveBeenCalledWith("Comedy")
-        })
+    const input = screen.getByTestId("movie-search-box");
 
+    await userEvent.type(input, "Comedy{enter}");
+
+    expect(onSearchCallback).toHaveBeenCalledTimes(1);
+    expect(onSearchCallback).toHaveBeenCalledWith("Comedy");
+  });
 });
