@@ -15,6 +15,7 @@ const AddMovieForm = ({ setDisplayAddMovieFormCallBack, showGenericMessagePortal
   const [form, setForm] = useState<Movie>(createEmptyMovie());
   const [showDropdown, setShowDropdown] = useState(false);
   const { toggleRefresh } = useMovieContext();
+  
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setForm((f) => ({ ...f, [name]: value }));
